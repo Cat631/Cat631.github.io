@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Form - 用户登录/注册 测试</title>
+  <link rel="stylesheet" href="css/test.css">
+  <link rel="stylesheet" href="css/Data.css">
+</head>
+<body>
+  <header class="site-header">
+    <h1>表单测试页面</h1>
+    <p class="lead">登录 / 注册 示例</p>
+  </header>
+
+  <nav class="container" style="margin-top:0;">
+    <div class="card" style="display:flex;align-items:center;justify-content:space-between;">
+      <div>
+        <strong>用户导航</strong>
+      </div>
+      <div>
+        <a href="index.html" class="btn-secondary" style="margin-right:8px">返回首页</a>
+        <button id="navLogin" class="btn-secondary">登录</button>
+        <button id="navRegister" class="btn-secondary">注册</button>
+      </div>
+    </div>
+  </nav>
+
+  <main class="container" id="formMain">
+    <section class="card" id="loginSection">
+      <h2>登录</h2>
+      <form id="loginForm">
+        <label>账户名称<br><input type="text" id="loginUsername" required></label>
+        <label>邮箱<br><input type="email" id="loginEmail" required></label>
+        <label>密码<br><input type="password" id="loginPassword" required></label>
+        <div style="margin-top:0.6rem">
+          <button type="submit" class="btn-primary">登录</button>
+        </div>
+      </form>
+    </section>
+
+    <section class="card hidden" id="registerSection">
+      <h2>注册</h2>
+      <form id="registerForm">
+        <label>账户名称<br><input type="text" id="regUsername" required></label>
+        <label>邮箱<br><input type="email" id="regEmail" required></label>
+        <label>密码<br><input type="password" id="regPassword" required></label>
+        <label>国别<br>
+          <select id="regCountry" required>
+            <option value="">请选择国家</option>
+            <option>中国</option>
+            <option>美国</option>
+            <option>英国</option>
+            <option>日本</option>
+            <option>其他</option>
+          </select>
+        </label>
+        <label style="display:block;margin-top:0.6rem"><input type="checkbox" id="regAgree"> 我已阅读并同意用户隐私协议</label>
+        <div style="margin-top:0.6rem">
+          <button type="submit" class="btn-primary">注册</button>
+        </div>
+      </form>
+    </section>
+  </main>
+
+  <script src="js/Data.js"></script>
+</body>
+</html>

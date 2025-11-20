@@ -16,6 +16,9 @@ document.addEventListener('DOMContentLoaded',function(){
   function stopBanner(){ if(bannerTimer){clearInterval(bannerTimer);bannerTimer=null;} }
 
   showAd.addEventListener('click',function(){ modal.classList.remove('hidden'); stopBanner(); });
+  // open Form page when openForm button clicked
+  const openFormBtn = document.getElementById('openForm');
+  if(openFormBtn){ openFormBtn.addEventListener('click', function(){ window.location.href = 'Form.html'; }); }
   closeAd.addEventListener('click',function(){ modal.classList.add('hidden'); startBanner(); });
   cta.addEventListener('click',function(){ alert('谢谢支持！'); modal.classList.add('hidden'); startBanner(); });
 
